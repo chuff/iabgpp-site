@@ -1,0 +1,266 @@
+  <div class="mt-3 mb-3 form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      value=""
+      id="usct-included"
+      onclick="disableusct(!this.checked)"
+    />
+    <label class="form-check-label" for="usct-included">Included</label>
+  </div>
+  <div class="mb-3">
+    <label for="usct-version" class="form-label">Version</label>
+    <input type="text" id="usct-version" class="form-control" placeholder="1" value="1" disabled />
+  </div>
+  <div class="mb-3">
+    <label for="usct-sharing-notice" class="form-label">Sharing Notice</label>
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-sharing-notice"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-sharing-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-sale-opt-out-notice" class="form-label">Sale Opt Out Notice</label>
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-sale-opt-out-notice"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-sale-opt-out-notice-feedback" class="invalid-feedback">Valid values are 0-2</div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-targeted-advertising-opt-out-notice" class="form-label"
+      >Targeted Advertising Opt Out Notice</label
+    >
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-targeted-advertising-opt-out-notice"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-targeted-advertising-opt-out-notice-feedback" class="invalid-feedback">
+      Valid values are 0-2
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-sale-opt-out" class="form-label">Sale Opt Out</label>
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-sale-opt-out"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-sale-opt-out-feedback" class="invalid-feedback">Valid values are 0-2</div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-targeted-advertising-opt-out" class="form-label"
+      >Targeted Advertising Opt Out</label
+    >
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-targeted-advertising-opt-out"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-targeted-advertising-opt-out-feedback" class="invalid-feedback">
+      Valid values are 0-2
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-sensitive-data-processing-0" class="form-label">Sensitive Data Processing</label>
+    <div class="input-group">
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-0"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-1"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-2"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-3"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-4"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-5"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-6"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-sensitive-data-processing-7"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-known-child-sensitive-data-consents-0" class="form-label"
+      >Known Child Sensitive Data Consents</label
+    >
+    <div class="input-group">
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-known-child-sensitive-data-consents-0"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-known-child-sensitive-data-consents-1"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+      <input
+        type="number"
+        min="0"
+        max="2"
+        id="usct-known-child-sensitive-data-consents-2"
+        class="form-control"
+        placeholder="0"
+        value="0"
+        disabled
+      />
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-mspa-covered-transaction" class="form-label">MSPA Covered Transaction</label>
+    <input
+      type="number"
+      min="1"
+      max="2"
+      id="usct-mspa-covered-transaction"
+      class="form-control"
+      placeholder="1"
+      value="1"
+      disabled
+    />
+    <div id="usct-mspa-covered-transaction-feedback" class="invalid-feedback">Valid values are 1-2</div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-mspa-opt-out-option-mode" class="form-label">MSPA Opt Out Option Mode</label>
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-mspa-opt-out-option-mode"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-mspa-opt-out-option-mode-feedback" class="invalid-feedback">Valid values are 0-2</div>
+  </div>
+  <div class="mb-3">
+    <label for="usct-mspa-service-provider-mode" class="form-label">MSPA Service Provider Mode</label>
+    <input
+      type="number"
+      min="0"
+      max="2"
+      id="usct-mspa-service-provider-mode"
+      class="form-control"
+      placeholder="0"
+      value="0"
+      disabled
+    />
+    <div id="usct-mspa-service-provider-mode-feedback" class="invalid-feedback">
+      Valid values are 0-2
+    </div>
+  </div>
+  <div class="mb-3 form-check">
+    <input class="form-check-input" type="checkbox" value="" id="usct-gpc-segment-included" checked disabled />
+    <label class="form-check-label" for="usct-gpc-segment-included">GPC Segment Included</label>
+  </div>
+  <div class="mb-3 form-check">
+    <input class="form-check-input" type="checkbox" value="" id="usct-gpc" disabled />
+    <label class="form-check-label" for="usct-gpc">GPC Enabled</label>
+  </div>
