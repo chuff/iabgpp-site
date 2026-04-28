@@ -1,0 +1,53 @@
+name: Update Vendor List
+
+on:
+  schedule:
+    # 8 AM EST (UTC-5) = 13:00 UTC every Friday
+    - cron: "0 13 * * 5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-build-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Update vendor list
+        run: |
+          chmod +x updatevendorlist.sh
+          ./updatevendorlist.sh
+
+      - name: Build site
+        run: npm run build
+
+      - name: Refresh docs from dist
+        run: |
+          find docs -mindepth 1 -maxdepth 1 ! -name 'CNAME' -exec rm -rf {} +
+          cp -R dist/. docs/
+
+      - name: Prevent dist from being committed
+        run: |
+          echo "dist/" >> .git/info/exclude
+          git reset -- dist || true
+
+      - name: Commit refreshed docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs
+          git add src/public/vendorlist || true
+
+          git diff --cached --quiet || git commit -m "Refresh vendor list site docs"
+          git push
