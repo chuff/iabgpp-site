@@ -20,6 +20,7 @@ import usnhHtml from '../../tabs/usnh.html?raw';
 import usnjHtml from '../../tabs/usnj.html?raw';
 import ustnHtml from '../../tabs/ustn.html?raw';
 import usmnHtml from '../../tabs/usmn.html?raw';
+import usriHtml from '../../tabs/usri.html?raw';
 
 import './utils.js';
 import './vendors.js';
@@ -50,6 +51,7 @@ const tabs = [
   { id: 'usnj-tab-pane', html: usnjHtml },
   { id: 'ustn-tab-pane', html: ustnHtml },
   { id: 'usmn-tab-pane', html: usmnHtml },
+  { id: 'usri-tab-pane', html: usriHtml },
 ];
 
 function buildTabs() {

@@ -670,3 +670,34 @@ export function disableusmn(disabled) {
   );
 }
 window.disableusmn = disableusmn;
+
+export function disableusri(disabled) {
+  document.getElementById("header-usri").checked = !disabled;
+  document.getElementById("usri-included").checked = !disabled;
+
+  disableAll(
+    [
+      "usri-mspa-covered-transaction",
+      "usri-mspa-mode",
+      "usri-processing-notice",
+      "usri-sale-opt-out-notice",
+      "usri-targeted-advertising-opt-out-notice",
+      "usri-sale-opt-out",
+      "usri-targeted-advertising-opt-out",
+      "usri-known-child-sensitive-data-consents",
+      "usri-additional-data-processing-consent",
+      "usri-sensitive-data-processing-0",
+      "usri-sensitive-data-processing-1",
+      "usri-sensitive-data-processing-2",
+      "usri-sensitive-data-processing-3",
+      "usri-sensitive-data-processing-4",
+      "usri-sensitive-data-processing-5",
+      "usri-sensitive-data-processing-6",
+      "usri-sensitive-data-processing-7",
+      "usri-gpc-segment-included",
+      "usri-gpc",
+    ],
+    disabled
+  );
+}
+window.disableusri = disableusri;
